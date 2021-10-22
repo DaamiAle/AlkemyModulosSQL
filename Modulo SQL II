@@ -1,0 +1,14 @@
+/*Ejercicio 1*/
+/*1.*/
+SELECT carrera,COUNT(*) FROM estudiante WHERE carrera = 'Mecanica';
+/*2.*/
+SELECT MIN(salario) from profesor WHERE fecha_nacimiento BETWEEN '1980' and '1990';
+/*3.*/
+SELECT PAIS.nombre,COUNT(*) FROM PASAJERO JOIN PAIS WHERE PASAJERO.pais = PAIS.id GROUP BY PAIS.nombre;
+SELECT SUM(monto) FROM PAGO;
+SELECT ROUND(SUM(monto),2) FROM PAGO JOIN PASAJERO WHERE PAGO.pasajero = PASAJERO.id GROUP BY PASAJERO.id;
+/*SELECT PASAJERO.nombre, PASAJERO.nro_documento,ROUND(SUM(monto),2) FROM PAGO JOIN PASAJERO WHERE PAGO.pasajero = PASAJERO.id GROUP BY PASAJERO.id;*/
+SELECT AVG(monto) FROM PAGO JOIN PASAJERO WHERE PAGO.pasajero = PASAJERO.id GROUP BY PASAJERO.id;
+/*SELECT PASAJERO.nombre, PASAJERO.nro_documento,COUNT(DISTINCT PAGO.id) AS 'Pagos Realizados',ROUND(SUM(monto),2),ROUND(AVG(monto),2) FROM PAGO JOIN PASAJERO WHERE PAGO.pasajero = PASAJERO.id GROUP BY PASAJERO.id;*/
+
+/*Ejercicio 2*/
